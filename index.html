@@ -42,8 +42,6 @@
               Contacto
             </a>
             <ul class="dropdown-menu">
-              <li><a class="fa-brands fa-whatsapp fa-bounce fa-lg" style="color: #37e407;"></i>
-              </a></li>
               <li><a class="fa-brands fa-facebook-messenger fa-bounce fa-lg" style="color: #195fd7;"></i>
               </a></li>
               <li><a class="fa-brands fa-instagram fa-bounce fa-lg" style="color: #db0fd5;"></i>
@@ -218,9 +216,130 @@
 
 
 
+<div section1>
+
+
+  <title>Ejemplo de API de clima</title>
+	<style>
+		body {
+			background-color: #f7f7f7;
+			color: #333;
+			font-family: Arial, sans-serif;
+		}
+
+		.section1 {
+			max-width: 500px;
+			margin: 0 auto;
+			padding: 20px;
+			background-color: #fff;
+			box-shadow: 0 3px 6px rgba(0,0,0,0.16);
+		}
+
+		h1 {
+			font-size: 2em;
+			text-align: center;
+			margin-top: 0;
+			margin-bottom: 20px;
+			color: #333;
+		}
+
+		.weather-data {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			margin-top: 20px;
+		}
+
+		.weather-data__item {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: space-between;
+			font-size: 1.2em;
+			margin-bottom: 10px;
+			padding: 10px;
+			background-color: #f2f2f2;
+			border-radius: 5px;
+			box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+		}
+
+		.weather-data__icon {
+			margin-right: 10px;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1>Información del tiempo</h1>
+		<div class="weather-data">
+			<div class="weather-data__item">
+				<img class="weather-data__icon" src="" alt="">
+				<span class="weather-data__text location"></span>
+			</div>
+			<div class="weather-data__item">
+				<img class="weather-data__icon" src="" alt="">
+				<span class="weather-data__text temperature"></span>
+			</div>
+			<div class="weather-data__item">
+				<img class="weather-data__icon" src="" alt="">
+				<span class="weather-data__text humidity"></span>
+			</div>
+			<div class="weather-data__item">
+				<img class="weather-data__icon" src="" alt="">
+				<span class="weather-data__text wind"></span>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		const apiKey = "25905abc18b684d2c27165712cc6eb44";
+		const apiUrl = "https://api.openweathermap.org/data/2.5/weather?q=Buenos%20Aires,AR&units=metric&appid=" + apiKey;
+
+		fetch(apiUrl)
+			.then(response => response.json())
+			.then(data => {
+				document.querySelector(".location").textContent = `${data.name}, ${data.sys.country}`;
+				document.querySelector(".temperature").textContent = `Temperatura: ${data.main.temp}°C`;
+				document.querySelector(".humidity").textContent = `Humedad: ${data.main.humidity}%`;
+				document.querySelector(".wind").textContent = `Viento: ${data.wind.speed} m/s`;
+			})
+			.catch(error => {
+				console.log("Error al obtener el clima actual.", error);
+			});
+</script>
+<!-- <title>Ejemplo de API de clima</title>
+
+
+    <h1>Información del tiempo</h1>
+
+    <div id="weather-data"></div>
+
+    <script>
+        const apiKey = "25905abc18b684d2c27165712cc6eb44";
+        const apiUrl = "https://api.openweathermap.org/data/2.5/weather?q=New%20York,US&units=metric&appid=" + apiKey;
+
+        fetch(apiUrl)
+            .then(response => response.json())
+            .then(data => {
+                const weatherData = `
+                    <p>Ubicación: ${data.name}, ${data.sys.country}</p>
+                    <p>Temperatura: ${data.main.temp}°C</p>
+                    <p>Humedad: ${data.main.humidity}%</p>
+                    <p>Viento: ${data.wind.speed} m/s</p>
+                `;
+                document.getElementById("weather-data").innerHTML = weatherData;
+            })
+            .catch(error => {
+                console.log("Error al obtener el clima actual.", error);
+            });
+    </script> -->
+
+
 
 
 <button onclick="document.getElementById('Formulario').style.display = 'block'">Contactenos!</button>
+<button onclick="showForm()">Contactenos!</button>
 
 
 <div id="Formulario" class="Formulario">
@@ -251,11 +370,11 @@
   <div class="section" style="display: flex;">
     <div class="logo pie" style="max-width: 300px; margin-right: 20px;">
       <div class="img">
-        <img src="/img/marca.jpeg" alt="">
-          <h3 style="margin:0;">Servicios Informaticos</h3>
+        <img src="/img/CAOTI CARE MARCA TERMINADA.jpg" alt="">
+          <h3 style="margin:0;text-align: center;word-wrap: break-word;">Servicios Informaticos</h3>
         </div>
         <div class="redes"style="display:flex; margin-top:10px;">
-         <a href="#" style="margin-right:50px;"><i class="fa-brands fa-facebook fa-lg" style="color:  #1860dc;"></i></a>
+         <a href="#" style="align-items: center;"><i class="fa-brands fa-facebook fa-lg" style="color:  #1860dc;"></i></a>
          <a href="#"><i class="fa-brands fa-instagram fa-lg" style="color: #c729c2;"></i></a>
         </div>
       </div>
