@@ -20,39 +20,48 @@
   <script src="/jquery-3.6.4.min.js"></script>
   <header>
     <!-- Menu pricipal -->
-      <div class ="logo">
-        <img src="/img/marca.jpeg" alt="logotipo" >
-        <h2 class="animate__animated animate__bounce">Dra.Irrazabal</h2>
+    <nav class="navbar fixed-top">
+      <div class="container">
+          <div class ="logo">
+              <img src="IMG/marca.png" alt="logotipo" >
+              <h2 class="animate__animated animate__bounce">Dra.Irrazabal</h2>
+          </div>
+            <ul class="menu">
+                  <li><a href="#about-desc">Inicio</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-item dropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Tratamientos
+                    </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="nav-item dropdown" href="#">Botox</a></li>
+                    <li><a class="nav-item dropdown" href="#">Hialuronico</a></li>
+                    <li><a class="nav-item dropdown" href="#">PRP</a></li>
+                  </ul>
+                </li>
+                <li><a href="#card">Nosotros</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-item dropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Contacto
+                    </a>
+                  <ul class="dropdown-menu">
+                    <li><acl ass="fa-brands fa-whatsapp fa-bounce fa-lg" style="color: #37e407;"></i>
+                      </a>
+                    </li>
+                    <li><a class="fa-brands fa-facebook-messenger fa-bounce fa-lg" style="color: #195fd7;"></i>
+                      </a>
+                    </li>
+                    <li><a class="fa-brands fa-instagram fa-bounce fa-lg" style="color: #db0fd5;"></i>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+            </ul>
       </div>
-       <nav>    
-        <ul class="menu">
-          <li><a href="#about-desc">Inicio</a></li>
-          <li class="nav-item dropdown">
-            <a class="nav-item dropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Tratamientos
-            </a>
-            <ul class="dropdown-menu">
-              <li><a href="#Botox"class="nav-item dropdown" href="#">Botox</a></li>
-              <li><a href="#Acido hialurónico"class="nav-item dropdown" href="#">Hialuronico</a></li>
-              <li><a href="#PRP"class="nav-item dropdown" href="#">PRP</a></li>
-            </ul>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-item dropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Contacto
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="fa-brands fa-facebook-messenger fa-bounce fa-lg" style="color: #195fd7;"></i>
-              </a></li>
-              <li><a class="fa-brands fa-instagram fa-bounce fa-lg" style="color: #db0fd5;"></i>
-              </a></li>
-            </ul>
-          </li>
-        </ul>
-      </nav>
+    </nav>
   </header>
+
     <!-- Carrucel imagenes -->
-    <section>
+<section>
       <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active">
@@ -74,9 +83,10 @@
           <span class="visually-hidden">Next</span>
         </button>
       </div>
-    </section>
-<!-- About -->
+</section>
 
+
+<!-- Bienvenida -->
 <div class="welcome-about">
   <div class="container">
       <div class="row">
@@ -96,35 +106,78 @@
           
       </div>
   </div>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
+</div>
 
-  <div class="row">
-    <div class="column">
-      <h3>Botox</h3>
-      <p id ="Botox": style="text-align: justify;">Las inyecciones de bótox bloquean determinadas señales químicas de los nervios, principalmente las señales que hacen que los músculos se contraigan. El uso más frecuente de estas inyecciones es relajar temporariamente los músculos faciales que causan arrugas en la frente y alrededor de los ojos.</p>
-    </div>
-    <div class="column">
-      <h3>Acido hialurónico</h3>
-      <p id ="Acido hialurónico": style="text-align: justify;">El ácido hialurónico es un polisacárido presente de forma natural en nuestras articulaciones, cartílagos y piel. Dependiendo de la zona en la que lo encontramos, cumple distintas funciones: En las articulaciones ayuda a evitar que se produzcan fricciones dolorosas. En los cartílagos funciona como reconstituyente.</p>
-    </div>
-    <div class="column">
-      <h3>Plasma Rico en Plaquetas</h3>
-      <p id ="PRP": style="text-align: justify;">El Plasma Rico en Plaquetas permite mejorar la calidad, grosor, elasticidad y firmeza de la piel, que queda más luminosa, menos flácida y más lisa. Por eso es la mejor opción para tratar las arrugas. No solo rejuvenece sino que además retrasa el proceso de envejecimiento.</p>
+<!-- Descripcion -->
+<div class="Description">
+  <div class="container">
+    <div class="row">
+      <div class="column">
+        <h3>Botox</h3>
+        <p id ="Botox": style="text-align: justify;">Las inyecciones de bótox bloquean determinadas señales químicas de los nervios, principalmente las señales que hacen que los músculos se contraigan. El uso más frecuente de estas inyecciones es relajar temporariamente los músculos faciales que causan arrugas en la frente y alrededor de los ojos.</p>
+      </div>
+      <div class="column">
+        <h3>Acido hialurónico</h3>
+        <p id ="Acido hialurónico": style="text-align: justify;">El ácido hialurónico es un polisacárido presente de forma natural en nuestras articulaciones, cartílagos y piel. Dependiendo de la zona en la que lo encontramos, cumple distintas funciones: En las articulaciones ayuda a evitar que se produzcan fricciones dolorosas. En los cartílagos funciona como reconstituyente.</p>
+      </div>
+      <div class="column">
+        <h3>Plasma Rico en Plaquetas</h3>
+        <p id ="PRP": style="text-align: justify;">El Plasma Rico en Plaquetas permite mejorar la calidad, grosor, elasticidad y firmeza de la piel, que queda más luminosa, menos flácida y más lisa. Por eso es la mejor opción para tratar las arrugas. No solo rejuvenece sino que además retrasa el proceso de envejecimiento.</p>
+      </div>
     </div>
   </div>
-  <br>
-  <br>
-  <br>
+</div>
 
-  <!-- Integrantes -->
+<!-- Estadisticas -->
+<div class="fun-fact text-center ptb-100">
+  <div class="container">
+      <div class="row">
+          <div class="col-lg-3 col-md-3 col-xs-12">
+              <div class="single-fun-fact float-left">
+                  <div class="fun-icon">
+                      <a href="#"><i class="fa fa-trophy" aria-hidden="true"></i></a>
+                  </div>
+                  <p class="counter">13</p>
+                  <h5>Premios</h5>
+              </div>
+          </div>
+          <div class="col-lg-2 col-md-3 col-xs-12">
+              <div class="single-fun-fact middle-margin-left">
+                  <div class="fun-icon">
+                      <a href="#"><i class="zmdi zmdi-favorite"></i></a>
+                  </div>
+                  <p class="counter">1586</p>
+                  <h5>Clientes</h5>
+              </div>
+          </div>
+          <div class="col-lg-4 col-md-3 col-xs-12">
+              <div class="single-fun-fact middle-margin">
+                  <div class="fun-icon">
+                      <a href="#"><i class="zmdi zmdi-male-female"></i></a>
+                  </div>
+                  <p class="counter">896</p>
+                  <h5>Tratamientos</h5>
+              </div>
+          </div>
+          <div class="col-lg-3 col-md-3 col-xs-12">
+              <div class="single-fun-fact float-right">
+                  <div class="fun-icon">
+                      <a href="#"><i class="fa fa-pagelines" aria-hidden="true"></i></a>
+                  </div>
+                  <p class="counter">300</p>
+                  <h5>Entrenamiento</h5>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+
+<!-- Nosotros -->
 <div class="container">
-<div style="display:flex; flex-wrap:wrap;">
+  <div style="display:flex; flex-wrap:wrap;">
    <div class="card">
-      <img src="/img/FCB.jpg" alt="Imagen de perfil">
+      <img src="IMG/FCB_1.jpg" alt="Imagen de perfil">
       <h2>Fernando Bogado</h2>
       <p>Administration</p>
       <p>Posadas - Misiones</p>
@@ -143,14 +196,14 @@
       <img src="/img/logo.jpg/150" alt="Imagen de perfil">
       <h2>Mariana Fernandez</h2>
       <p>Camarera</p>
-      <p>Hurlingham - BsAs</p>
+      <p>Hurlingham - Bs As</p>
       <p><i class="fa-solid fa-at fa-bounce fa-lg" style="color: #542ab7;"></i></p>
       <a class="fa-brands fa-whatsapp fa-bounce fa-lg" style="color: #37e407;"></a></p>
     </div>
     <div class="card">
       <img src="/img/logo.jpg/150" alt="Imagen de perfil">
       <h2>Rene Quinteros</h2>
-      <p>Estilita</p>
+      <p>Estilista</p>
       <p>Tigre - BsAs</p>
       <p><i class="fa-solid fa-at fa-bounce fa-lg" style="color: #542ab7;"></i></p>
       <a class="fa-brands fa-whatsapp fa-bounce fa-lg" style="color: #37e407;"></a></p>
@@ -159,12 +212,12 @@
       <img src="/img/logo.jpg/150" alt="Imagen de perfil">
       <h2>Gabriel Ayala</h2>
       <p>Cargo o profesión</p>
-      <p>Bahia Blanca - BsAs</p>
       <p><i class="fa-solid fa-at fa-bounce fa-lg" style="color: #542ab7;"></i></p>
       <a class="fa-brands fa-whatsapp fa-bounce fa-lg" style="color: #37e407;"></a></p>
     </div>
+  </div>
 </div>
-</div>
+
 <br>
 <br>
 
@@ -222,7 +275,6 @@
   <title>Ejemplo de API de clima</title>
 	<style>
 		body {
-			background-color: #f7f7f7;
 			color: #333;
 			font-family: Arial, sans-serif;
 		}
@@ -270,27 +322,6 @@
 	</style>
 </head>
 <body>
-	<div class="container">
-		<h1>Información del tiempo</h1>
-		<div class="weather-data">
-			<div class="weather-data__item">
-				<img class="weather-data__icon" src="" alt="">
-				<span class="weather-data__text location"></span>
-			</div>
-			<div class="weather-data__item">
-				<img class="weather-data__icon" src="" alt="">
-				<span class="weather-data__text temperature"></span>
-			</div>
-			<div class="weather-data__item">
-				<img class="weather-data__icon" src="" alt="">
-				<span class="weather-data__text humidity"></span>
-			</div>
-			<div class="weather-data__item">
-				<img class="weather-data__icon" src="" alt="">
-				<span class="weather-data__text wind"></span>
-			</div>
-		</div>
-	</div>
 
 	<script>
 		const apiKey = "25905abc18b684d2c27165712cc6eb44";
@@ -366,38 +397,105 @@
 
 </div>
 
-<footer class="pie" ;>
-  <div class="section" style="display: flex;">
-    <div class="logo pie" style="max-width: 300px; margin-right: 20px;">
-      <div class="img">
-        <img src="/img/CAOTI CARE MARCA TERMINADA.jpg" alt="">
-          <h3 style="margin:0;text-align: center;word-wrap: break-word;">Servicios Informaticos</h3>
+<!-- Footer -->
+<footer>
+  <div class="footer">
+    <div class="footer-top ptb-100">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-xs-12">
+                    <div class="single-footer contact">
+                        <div class="footer-title">
+                            <h3>Contactanos</h3>
+                        </div>
+                        <div class="contact-action mb-15">
+                            <span><i class="zmdi zmdi-pin"></i></span>
+                            <p>House No 08, Road No 08,<br>Din Bari, Dhaka, Bangladesh</p>
+                        </div>
+                        <div class="contact-action mb-15">
+                            <span><i class="zmdi zmdi-email"></i></span>
+                            <p>info@example.com<br>info@example.com</p>
+                        </div>
+                        <div class="contact-action">
+                            <span>
+                                <i class="zmdi zmdi-phone"></i>
+                            </span>
+                            <p>+012 345 678 102<br>+012 345 678 102</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 col-xs-12">
+                    <div class="single-footer quick-links">
+                       <div class="footer-title">
+                            <h3>Accesos</h3>
+                        </div>
+                        <ul>
+                            <li><a href="#">Inicio</a></li>
+                            <li><a href="#">Tratamientos</a></li>
+                            <li><a href="#">Nosotros</a></li>
+                            <li><a href="#">Contacto</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-xs-12">
+                    <div class="single-footer open-hours">
+                        <div class="footer-title">
+                            <h3>Horarios</h3>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet, consectetueiusmodm dost  adipisicing elit, sed do eiusmod is tempincididuntm ut 
+lorem ipsome do or sit amt  labore et dolor </p>
+                        <ul>
+                            <li>Lunes - Viernes <span>8:00 a 17:00</span></li>
+                            <li>Sabados <span>8:00 a 12:00</span></li>
+                            <li>Domingo <span class="close">Cerrado</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-xs-12">
+                    <div class="single-footer widget">
+                        <div class="footer-title">
+                            <h3>Información del tiempo</h3>
+                        </div>                 
+                          <div class="weather-data">
+                            <div class="weather-data__item">
+                              <img class="weather-data__icon" src="" alt="">
+                              <span class="weather-data__text location"></span>
+                            </div>
+                            <div class="weather-data__item">
+                              <img class="weather-data__icon" src="" alt="">
+                              <span class="weather-data__text temperature"></span>
+                            </div>
+                            <div class="weather-data__item">
+                              <img class="weather-data__icon" src="" alt="">
+                              <span class="weather-data__text humidity"></span>
+                            </div>
+                            <div class="weather-data__item">
+                              <img class="weather-data__icon" src="" alt="">
+                              <span class="weather-data__text wind"></span>
+                            </div>
+                          </div>
+                        
+                      
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="redes"style="display:flex; margin-top:10px;">
-         <a href="#" style="align-items: center;"><i class="fa-brands fa-facebook fa-lg" style="color:  #1860dc;"></i></a>
-         <a href="#"><i class="fa-brands fa-instagram fa-lg" style="color: #c729c2;"></i></a>
-        </div>
-      </div>
-    <div class="Contactenos"style="max-width: 300px; margin-right: 20px;">
-         <h5>Contactenos</h5>
-         <a href="#">Ubicacion</a>
-         <a href="#">Whatsapp</a>
-         <a href="mailto:correo@ejemplo.com">Correo Electrónico</a>
     </div>
-        <div class="Sobre-Nosotros" style="max-width:300px; margin-right:20px;">
-         <h5>Sobre Nosotros</h5>
-         <a href="#">Ubicacion</a>
-         </div>
-    <div class="Sitio-Web" style="flex:1; max-width:300px;">
-         <h5>Sitio Web</h5>
-         <a href="#">Privacy</a>
-         <a href="#">Term & Conditions</a>
-         <a href="#">Accesibilidad</a>
-      </div>
-  </div>
+    <div class="footer-bottom text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div class="copyright">
+                        <p>All right reserved - Copyright© 2023.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 </footer>
 
-<p  id="Derechos">Derechos Reservados © 2023</p>
 
 
 <!-- Formulario -->
