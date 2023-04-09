@@ -172,6 +172,21 @@
   </div>
 </div>
 
+  <div class="row">
+    <div class="column">
+      <h3>Botox</h3>
+      <p id ="Botox": style="text-align: justify ; padding-left: 30px;">Las inyecciones de bótox bloquean determinadas señales químicas de los nervios, principalmente las señales que hacen que los músculos se contraigan. El uso más frecuente de estas inyecciones es relajar temporariamente los músculos faciales que causan arrugas en la frente y alrededor de los ojos.</p>
+    </div>
+    <div class="column">
+      <h3>Acido hialurónico</h3>
+      <p id ="Acido hialurónico": style="text-align: justify;">El ácido hialurónico es un polisacárido presente de forma natural en nuestras articulaciones, cartílagos y piel. Dependiendo de la zona en la que lo encontramos, cumple distintas funciones: En las articulaciones ayuda a evitar que se produzcan fricciones dolorosas. En los cartílagos funciona como reconstituyente.</p>
+    </div>
+    <div class="column">
+      <h3>Plasma Rico en Plaquetas</h3>
+      <p id ="PRP": style="text-align: justify ;padding-right: 30px;">El Plasma Rico en Plaquetas permite mejorar la calidad, grosor, elasticidad y firmeza de la piel, que queda más luminosa, menos flácida y más lisa. Por eso es la mejor opción para tratar las arrugas. No solo rejuvenece sino que además retrasa el proceso de envejecimiento.</p>
+    </div>
+  </div>
+
 
 <!-- Nosotros -->
 <div class="container">
@@ -218,60 +233,45 @@
   </div>
 </div>
 
-<br>
-<br>
+<!-- 
+<style>
+  .container1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    padding: 20px;
 
-<!-- <div class="page">
-  <h2>Página 1</h2>
-  <p>
-    <label for="nombre">Nombre:</label>
-    <input type="text" id="nombre" name="nombre" required>
-  </p>
-  <p>
-    <label for="apellido">Apellido:</label>
-    <input type="text" id="apellido" name="apellido" required>
-  </p>
-  <button class="next">Siguiente</button>
-</div>
+  }
 
-<div class="page">
-  <h2>Página 2</h2>
-  <p>Resumen de la información ingresada:</p>
-  <p>
-    <label>Nombre:</label>
-    <span id="nombre-resumen"></span>
-  </p>
-  <p>
-    <label>Apellido:</label>
-    <span id="apellido-resumen"></span>
-  </p>
-  <button class="prev">Anterior</button>
-  <button class="next">Siguiente</button>
-</div>
+  .weather-data {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    margin-top: 20px;
+  }
 
-<div class="page">
-  <h2>Página 3</h2>
-  <p>Información final:</p>
-  <p>
-    <label>Nombre:</label>
-    <span id="nombre-final"></span>
-  </p>
-  <p>
-    <label>Apellido:</label>
-    <span id="apellido-final"></span>
-  </p>
-  <button class="prev">Anterior</button>
-  <button type="submit">Enviar</button>
-</div> -->
+  .weather-data__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
 
+  .weather-data__icon {
+    width: 50px;
+    height: 50px;
+  }
 
+  .weather-data__text {
+    margin-top: 10px;
+  }
+</style>
+ -->
 
-
-
-
-<div section1>
-
-
+<!-- 
   <title>Ejemplo de API de clima</title>
 	<style>
 		body {
@@ -320,8 +320,7 @@
 			margin-right: 10px;
 		}
 	</style>
-</head>
-<body>
+ -->
 
 	<script>
 		const apiKey = "25905abc18b684d2c27165712cc6eb44";
@@ -339,35 +338,6 @@
 				console.log("Error al obtener el clima actual.", error);
 			});
 </script>
-<!-- <title>Ejemplo de API de clima</title>
-
-
-    <h1>Información del tiempo</h1>
-
-    <div id="weather-data"></div>
-
-    <script>
-        const apiKey = "25905abc18b684d2c27165712cc6eb44";
-        const apiUrl = "https://api.openweathermap.org/data/2.5/weather?q=New%20York,US&units=metric&appid=" + apiKey;
-
-        fetch(apiUrl)
-            .then(response => response.json())
-            .then(data => {
-                const weatherData = `
-                    <p>Ubicación: ${data.name}, ${data.sys.country}</p>
-                    <p>Temperatura: ${data.main.temp}°C</p>
-                    <p>Humedad: ${data.main.humidity}%</p>
-                    <p>Viento: ${data.wind.speed} m/s</p>
-                `;
-                document.getElementById("weather-data").innerHTML = weatherData;
-            })
-            .catch(error => {
-                console.log("Error al obtener el clima actual.", error);
-            });
-    </script> -->
-
-
-
 
 <button onclick="document.getElementById('Formulario').style.display = 'block'">Contactenos!</button>
 <button onclick="showForm()">Contactenos!</button>
@@ -393,8 +363,6 @@
       <button class="btn btn-primary" type="submit">Enviar</button>
     </div>
   </form>
-
-
 </div>
 
 <!-- Footer -->
@@ -493,13 +461,6 @@ lorem ipsome do or sit amt  labore et dolor </p>
         </div>
     </div>
 </div>
-
 </footer>
-
-
-
-<!-- Formulario -->
-
-
 
 </body>
