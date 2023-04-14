@@ -5,61 +5,56 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MSI </title>
-    <link rel="stylesheet" href="atributos.css">
     <link rel="icon" href="img/marca.jpeg">
+    <link rel="stylesheet" href="atributos.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous">
-    </script>
-    <script src="https://kit.fontawesome.com/36ca07dc36.js" crossorigin="anonymous"></script>
-
 <!--Arrancando la pagina-->
-<!-- para que aparezcan los comentarios ctrol+k control+c 
-  que capo soy -->
 <body>
-  <script src="/jquery-3.6.4.min.js"></script>
-  <header>
+ <header>
     <!-- Menu pricipal -->
-    <nav class="navbar fixed-top">
-      <div class="container">
-          <div class ="logo">
-              <img src="IMG/marca.png" alt="logotipo" >
-              <h2 class="animate__animated animate__bounce">Dra.Irrazabal</h2>
+  <nav class="navbar navbar-expand-lg fixed-top" style="background-color: #ffffff;">
+      <a class="navbar-brand" href="#">
+          <img src="IMG/marca.png" alt="logotipo" width="30" height="30" class="d-inline-block align-text-top">
+              Dra. Irrazabal
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarOffcanvasLg" aria-controls="navbarOffcanvasLg" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="navbarOffcanvasLg" aria-labelledby="navbarOffcanvasLgLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Dra. Irrazabal</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
           </div>
-            <ul class="menu">
-                  <li><a href="#about-desc">Inicio</a></li>
-                <li class="nav-item dropdown">
-                    <a class="nav-item dropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Tratamientos
-                    </a>
-                  <ul class="dropdown-menu">
-                    <li><a class="nav-item dropdown" href="#">Botox</a></li>
-                    <li><a class="nav-item dropdown" href="#">Hialuronico</a></li>
-                    <li><a class="nav-item dropdown" href="#">PRP</a></li>
-                  </ul>
-                </li>
-                <li><a href="#card">Nosotros</a></li>
-                <li class="nav-item dropdown">
-                    <a class="nav-item dropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Contacto
-                    </a>
-                  <ul class="dropdown-menu">
-                    <li><acl ass="fa-brands fa-whatsapp fa-bounce fa-lg" style="color: #37e407;"></i>
-                      </a>
-                    </li>
-                    <li><a class="fa-brands fa-facebook-messenger fa-bounce fa-lg" style="color: #195fd7;"></i>
-                      </a>
-                    </li>
-                    <li><a class="fa-brands fa-instagram fa-bounce fa-lg" style="color: #db0fd5;"></i>
-                      </a>
-                    </li>
-                  </ul>
-                </li>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#">Inicio</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Tratamientos
+                </a>
+                <ul class="dropdown-menu" style="background-color: #ffffff;">
+                  <li><a class="dropdown-item" href="#Botox">Botox</a></li>
+                  <li><a class="dropdown-item" href="#Acido_hialuronico">Hialuronico</a></li>
+                  <li><a class="dropdown-item" href="#PRP">PRP</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#nosotros">Nosotros</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" role="button" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap">
+                  Contacto
+                </a>
+              </li>
             </ul>
+          </div>
+        </div>
       </div>
-    </nav>
-  </header>
-
+  </nav>
+</header>
     <!-- Carrucel imagenes -->
 <section>
       <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
@@ -76,15 +71,14 @@
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
+          <span class="visually-hidden">Siguiente</span>
         </button>
         <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
+          <span class="visually-hidden">Anterior</span>
         </button>
       </div>
 </section>
-
 
 <!-- Bienvenida -->
 <div class="welcome-about">
@@ -98,9 +92,9 @@
           <div class="col-lg-6 col-sm-12 col-xs-12">
               <div id="about-desc">
                   <h6>Welcome a Space Dra Irrazabal</h6>
-                  <h2>MEDICINA ESTETICA</h2>
+                  <h1>MEDICINA ESTETICA</h1>
                   <p id ="Nosotros": style="text-align: justify;">La Dra. Irrazabal es una profesional de la medicina estética con amplia experiencia en el campo de los tratamientos minimamente invasivos para el cuidado de la piel y la belleza. Su enfoque es brindar soluciones personalizadas a las necesidades de cada paciente, utilizando técnicas innovadoras y tecnologías de vanguardia para obtener resultados óptimos. La Dra. Irrazabal es reconocida por su dedicación y compromiso en el cuidado de sus pacientes, y su pasión por mantenerse actualizada en los últimos avances de la medicina estética. Con su enfoque centrado en el paciente y su experiencia en el campo, la Dra. Irrazabal es una excelente opción para aquellos que buscan mejorar su apariencia y su autoestima.</p>
-                  <a href="#">Read more</a>
+                  <a href="#">Saber mas...</a>
               </div>
           </div>
           
@@ -108,7 +102,7 @@
   </div>
 </div>
 
-<!-- Descripcion -->
+<!-- Tratamientos -->
 <div class="Description">
   <div class="container">
     <div class="row">
@@ -118,7 +112,7 @@
       </div>
       <div class="column">
         <h3>Acido hialurónico</h3>
-        <p id ="Acido hialurónico": style="text-align: justify;">El ácido hialurónico es un polisacárido presente de forma natural en nuestras articulaciones, cartílagos y piel. Dependiendo de la zona en la que lo encontramos, cumple distintas funciones: En las articulaciones ayuda a evitar que se produzcan fricciones dolorosas. En los cartílagos funciona como reconstituyente.</p>
+        <p id ="Acido_hialuronico": style="text-align: justify;">El ácido hialurónico es un polisacárido presente de forma natural en nuestras articulaciones, cartílagos y piel. Dependiendo de la zona en la que lo encontramos, cumple distintas funciones: En las articulaciones ayuda a evitar que se produzcan fricciones dolorosas. En los cartílagos funciona como reconstituyente.</p>
       </div>
       <div class="column">
         <h3>Plasma Rico en Plaquetas</h3>
@@ -135,7 +129,7 @@
           <div class="col-lg-3 col-md-3 col-xs-12">
               <div class="single-fun-fact float-left">
                   <div class="fun-icon">
-                      <a href="#"><i class="fa fa-trophy" aria-hidden="true"></i></a>
+                    <a href="#"><img src="Fonts/cup.svg" width="30" height="30"></a>
                   </div>
                   <p class="counter">13</p>
                   <h5>Premios</h5>
@@ -144,7 +138,7 @@
           <div class="col-lg-2 col-md-3 col-xs-12">
               <div class="single-fun-fact middle-margin-left">
                   <div class="fun-icon">
-                      <a href="#"><i class="zmdi zmdi-favorite"></i></a>
+                      <a href="#"><img src="Fonts/usuario.svg" width="30" height="30"></a>
                   </div>
                   <p class="counter">1586</p>
                   <h5>Clientes</h5>
@@ -153,7 +147,7 @@
           <div class="col-lg-4 col-md-3 col-xs-12">
               <div class="single-fun-fact middle-margin">
                   <div class="fun-icon">
-                      <a href="#"><i class="zmdi zmdi-male-female"></i></a>
+                      <a href="#"><img src="Fonts/farmacia.svg" width="45" height="45"></a>
                   </div>
                   <p class="counter">896</p>
                   <h5>Tratamientos</h5>
@@ -172,24 +166,8 @@
   </div>
 </div>
 
-  <div class="row">
-    <div class="column">
-      <h3>Botox</h3>
-      <p id ="Botox": style="text-align: justify ; padding-left: 30px;">Las inyecciones de bótox bloquean determinadas señales químicas de los nervios, principalmente las señales que hacen que los músculos se contraigan. El uso más frecuente de estas inyecciones es relajar temporariamente los músculos faciales que causan arrugas en la frente y alrededor de los ojos.</p>
-    </div>
-    <div class="column">
-      <h3>Acido hialurónico</h3>
-      <p id ="Acido hialurónico": style="text-align: justify;">El ácido hialurónico es un polisacárido presente de forma natural en nuestras articulaciones, cartílagos y piel. Dependiendo de la zona en la que lo encontramos, cumple distintas funciones: En las articulaciones ayuda a evitar que se produzcan fricciones dolorosas. En los cartílagos funciona como reconstituyente.</p>
-    </div>
-    <div class="column">
-      <h3>Plasma Rico en Plaquetas</h3>
-      <p id ="PRP": style="text-align: justify ;padding-right: 30px;">El Plasma Rico en Plaquetas permite mejorar la calidad, grosor, elasticidad y firmeza de la piel, que queda más luminosa, menos flácida y más lisa. Por eso es la mejor opción para tratar las arrugas. No solo rejuvenece sino que además retrasa el proceso de envejecimiento.</p>
-    </div>
-  </div>
-
-
 <!-- Nosotros -->
-<div class="container">
+<div class="container" id="nosotros">
   <div style="display:flex; flex-wrap:wrap;">
    <div class="card">
       <img src="IMG/FCB_1.jpg" alt="Imagen de perfil">
@@ -200,7 +178,7 @@
       <a class="fa-brands fa-whatsapp fa-bounce fa-lg" style="color: #37e407;"></a></p>
     </div>
     <div class="card">
-      <img src="/img/logo.jpg/150" alt="Imagen de perfil">
+      <img src="img/Angel.jpg" alt="Imagen de perfil">
       <h2>Angel Sagredo</h2>
       <p>Administration</p>
       <p>Santa Fe - Santa Fe</p>
@@ -233,136 +211,32 @@
   </div>
 </div>
 
-<!-- 
-<style>
-  .container1 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 200px;
-    padding: 20px;
-
-  }
-
-  .weather-data {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 10px;
-    margin-top: 20px;
-  }
-
-  .weather-data__item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-  }
-
-  .weather-data__icon {
-    width: 50px;
-    height: 50px;
-  }
-
-  .weather-data__text {
-    margin-top: 10px;
-  }
-</style>
- -->
-
-<!-- 
-  <title>Ejemplo de API de clima</title>
-	<style>
-		body {
-			color: #333;
-			font-family: Arial, sans-serif;
-		}
-
-		.section1 {
-			max-width: 500px;
-			margin: 0 auto;
-			padding: 20px;
-			background-color: #fff;
-			box-shadow: 0 3px 6px rgba(0,0,0,0.16);
-		}
-
-		h1 {
-			font-size: 2em;
-			text-align: center;
-			margin-top: 0;
-			margin-bottom: 20px;
-			color: #333;
-		}
-
-		.weather-data {
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			justify-content: center;
-			margin-top: 20px;
-		}
-
-		.weather-data__item {
-			display: flex;
-			flex-direction: row;
-			align-items: center;
-			justify-content: space-between;
-			font-size: 1.2em;
-			margin-bottom: 10px;
-			padding: 10px;
-			background-color: #f2f2f2;
-			border-radius: 5px;
-			box-shadow: 0 3px 6px rgba(0,0,0,0.1);
-		}
-
-		.weather-data__icon {
-			margin-right: 10px;
-		}
-	</style>
- -->
-
-	<script>
-		const apiKey = "25905abc18b684d2c27165712cc6eb44";
-		const apiUrl = "https://api.openweathermap.org/data/2.5/weather?q=Buenos%20Aires,AR&units=metric&appid=" + apiKey;
-
-		fetch(apiUrl)
-			.then(response => response.json())
-			.then(data => {
-				document.querySelector(".location").textContent = `${data.name}, ${data.sys.country}`;
-				document.querySelector(".temperature").textContent = `Temperatura: ${data.main.temp}°C`;
-				document.querySelector(".humidity").textContent = `Humedad: ${data.main.humidity}%`;
-				document.querySelector(".wind").textContent = `Viento: ${data.wind.speed} m/s`;
-			})
-			.catch(error => {
-				console.log("Error al obtener el clima actual.", error);
-			});
-</script>
-
-<button onclick="document.getElementById('Formulario').style.display = 'block'">Contactenos!</button>
-<button onclick="showForm()">Contactenos!</button>
-
-
-<div id="Formulario" class="Formulario">
-  <h2>Consulta las promos
-    <br> disponibles!</h2>
-  <form action="formulario" method="post">
-    <div class="form-floating">
-      <input type="Nombre" class="form-control" id="" placeholder="Nombre">
-      <label for="floatingInput">Nombre</label>
+<!-- Cuadro de mensajes -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Nuevo Mensaje</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="recipient-name" class="col-form-label">Nombre:</label>
+            <input type="text" class="form-control" id="recipient-name">
+          </div>
+          <div class="mb-3">
+            <label for="message-text" class="col-form-label">Mensaje:</label>
+            <textarea class="form-control" id="message-text"></textarea>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-primary">Enviar mensaje</button>
+      </div>
     </div>
-    <div class="form-floating">
-      <input type="email" class="form-control" id="" placeholder="email">
-      <label for="floatingPassword">email</label>
-    </div>
-    <div class="text">
-      <textarea name="comentario" class="form-control" id="comentario" cols="49" rows="10" placeholder="Deje su comentario"></textarea>
-      <label for="comentario"></label>
-    </div>
-    <div class="d-grid gap-2">
-      <button class="btn btn-primary" type="submit">Enviar</button>
-    </div>
-  </form>
+  </div>
 </div>
 
 <!-- Footer -->
@@ -374,28 +248,28 @@
                 <div class="col-lg-3 col-md-6 col-xs-12">
                     <div class="single-footer contact">
                         <div class="footer-title">
-                            <h3>Contactanos</h3>
+                            <p>Contactanos</p>
                         </div>
                         <div class="contact-action mb-15">
                             <span><i class="zmdi zmdi-pin"></i></span>
-                            <p>House No 08, Road No 08,<br>Din Bari, Dhaka, Bangladesh</p>
+                            <p>House No 08, Road No 08,<br>Palermo, Buenos Aires, Argentina</p>
                         </div>
                         <div class="contact-action mb-15">
                             <span><i class="zmdi zmdi-email"></i></span>
-                            <p>info@example.com<br>info@example.com</p>
+                            <p>info@example.com<br>Administracion@example.com</p>
                         </div>
                         <div class="contact-action">
                             <span>
                                 <i class="zmdi zmdi-phone"></i>
                             </span>
-                            <p>+012 345 678 102<br>+012 345 678 102</p>
+                            <p>+054 011 678 102<br>+054 011 678 102</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-2 col-md-6 col-xs-12">
                     <div class="single-footer quick-links">
                        <div class="footer-title">
-                            <h3>Accesos</h3>
+                            <p>Accesos</p>
                         </div>
                         <ul>
                             <li><a href="#">Inicio</a></li>
@@ -408,7 +282,7 @@
                 <div class="col-lg-4 col-md-6 col-xs-12">
                     <div class="single-footer open-hours">
                         <div class="footer-title">
-                            <h3>Horarios</h3>
+                            <p>Horarios</p>
                         </div>
                         <p>Lorem ipsum dolor sit amet, consectetueiusmodm dost  adipisicing elit, sed do eiusmod is tempincididuntm ut 
 lorem ipsome do or sit amt  labore et dolor </p>
@@ -422,7 +296,7 @@ lorem ipsome do or sit amt  labore et dolor </p>
                 <div class="col-lg-3 col-md-6 col-xs-12">
                     <div class="single-footer widget">
                         <div class="footer-title">
-                            <h3>Información del tiempo</h3>
+                            <p>Información del tiempo</p>
                         </div>                 
                           <div class="weather-data">
                             <div class="weather-data__item">
@@ -442,8 +316,6 @@ lorem ipsome do or sit amt  labore et dolor </p>
                               <span class="weather-data__text wind"></span>
                             </div>
                           </div>
-                        
-                      
                     </div>
                 </div>
             </div>
@@ -454,7 +326,7 @@ lorem ipsome do or sit amt  labore et dolor </p>
             <div class="row">
                 <div class="col-md-12 col-sm-12 col-xs-12">
                     <div class="copyright">
-                        <p>All right reserved - Copyright© 2023.</p>
+                        <p>Todos los derechos reservados - Copyright© 2023.</p>
                     </div>
                 </div>
             </div>
@@ -463,4 +335,25 @@ lorem ipsome do or sit amt  labore et dolor </p>
 </div>
 </footer>
 
+<!-- API Tiempo -->
+<script>
+  const apiKey = "25905abc18b684d2c27165712cc6eb44";
+  const apiUrl = "https://api.openweathermap.org/data/2.5/weather?q=Buenos%20Aires,AR&units=metric&appid=" + apiKey;
+
+  fetch(apiUrl)
+    .then(response => response.json())
+    .then(data => {
+      document.querySelector(".location").textContent = `${data.name}, ${data.sys.country}`;
+      document.querySelector(".temperature").textContent = `Temperatura: ${data.main.temp}°C`;
+      document.querySelector(".humidity").textContent = `Humedad: ${data.main.humidity}%`;
+      document.querySelector(".wind").textContent = `Viento: ${data.wind.speed} m/s`;
+    })
+    .catch(error => {
+      console.log("Error al obtener el clima actual.", error);
+    });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+<script src="/jquery-3.6.4.min.js"></script>
+<script src="https://kit.fontawesome.com/36ca07dc36.js" crossorigin="anonymous"></script>
 </body>
