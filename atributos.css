@@ -1,174 +1,67 @@
-header{
-  padding: 30px;
-  }
-
-h2 {
-  white-space: nowrap;
-  }
-
-.logo{
-  display: flex;
-  align-items: center;
-}
-.logo img{
-  height: 50px;
-  margin-right: 10px;
-  padding: auto;
-  vertical-align: middle;
-}
---
-.enlace {
-    display: flex;
-    align-items: last baseline;
-    position: absolute;
-    padding: 0px 0px;
-  }
-
-.nombre {
-    font-weight: bold;
-    font-size: 2 rem;
-  }
-
+/* limpia pagina al cargar*/
 * {
-    padding:0;
-    margin: 0;
-    text-decoration: none;
-    list-style: none;
-    box-sizing: border-box;
+  padding:0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
 }
-nav{
-  background: #ffffff;
-  height: 60px;
-  width: 100%;
+/*Estilos barra Menu Principal*/
+.navbar {
   box-shadow: 1px 1px 5px;
 }
-
-
-nav ul{
-  float: right;
-  margin-right: 50px;
+.navbar-brand {
+  margin-left: 80px;
 }
-
-nav ul li{
-  display: inline-block;
-  line-height: 35px;
-  margin: 0 5px;
+.navbar-nav {
+  margin-right: 80px;
 }
-
-nav ul li a{
-  color: rgb(0, 0, 0);
-  font-size: 16px;
-  padding: 7px 13px;
-  border-radius: 4px;
-  text-transform: uppercase;
-  text-decoration: none;
-}
-
-li a.active{
+.nav-item a:hover{
   background: #ccae93;
+  border-radius: 5px;
   transition: .5s;
-  color: #ffffff;
+  color: rgb(255, 255, 255);
 }
-
-li a:hover{
+.nav-item {
+  text-decoration: none;
+  color: black;
+}
+.nav-item li{
+  text-align: center;
+}
+.nav-item li:hover{
   background: #ccae93;
+  border-radius: 5px;
   transition: .5s;
   color: rgb(255, 255, 255);
 }
 
-@media (max-width: 952px){
-    .enlace{
-        padding-left: 20px;
-    }
+/* espaciado carrucel*/
+section {
+  margin: 50px 0 60px;
 }
 
-@media (max-width: 858px){
-
+/* espaciado bienvenida*/
+.Description {
+  margin: 80px 0 50px;
 }
 
-.welcome-about {
-    padding-bottom: 100px;
-    padding-top: 90px;
-}
-
-@media (max-width: 767px){
-.about-img {
-    border-right: medium none;
-    text-align: center;
-}
-}
-/* Columnas descripcion botox,acido hialuronico y prp */
-
+/*Estilo seccion Description*/
 .column {
   flex: 1;
   padding: 10px;
   text-align: center;
 }
-
 .column p {
  padding: 20px;
 }
 
-.logo whatsapp{
-  display: flex;
-  align-items: center;
-}
-
-#Derechos {
-  text-align: right;
-  color: black;
-}
-.card {
-  width: 250px;
-  background-color: #f2f2f2;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  padding: 10px;
-}
-
-.card img {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  display: block;
-  margin: 0 auto;
-  margin-bottom: 20px;
-}
-
-.card h2 {
-  font-size: 1.5em;
-  text-align: center;
-  margin-bottom: 5px;
-}
-
-.card a {
-  font-size: 1.2em;
-  text-align: center;
-  margin-bottom: 5px;
-}
-.card p {
-  font-size: 1.2em;
-  text-align: center;
-  margin-bottom: 5px;
-}
-
+/* estilos a Estadisticas*/
 .fun-fact {
   margin-bottom: 50px;
   padding: 100px;
   background-color: #ccae93;
 }
-
-footer{
-  margin-top: 100px;
-  padding-top: 20px;
-  background-color: #e6dbd3;
-}
-
-.btn {
-  width: 150px;
-  margin-left: 250px;
-}
-
 .fun-icon a {
   border: 1px solid #fff;
   border-radius: 50%;
@@ -192,21 +85,56 @@ footer{
   margin-top: 8px;
   text-transform: uppercase;
 }
-.text-center {
-  text-align: center!important;
+
+/* Estilos de las Cards*/
+.card {
+  width: 250px;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  padding: 10px;
 }
-.container .row div[class^=col-] {
-  position: relative;
+.card img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+.card h2 {
+  font-size: 1.5em;
+  text-align: center;
+  margin-bottom: 5px;
+}
+.card a {
+  font-size: 1.2em;
+  text-align: center;
+  margin-bottom: 5px;
+}
+.card p {
+  font-size: 1.2em;
+  text-align: center;
+  margin-bottom: 5px;
 }
 
+/* Estilos al Footer */
+.footer-top {
+  margin: 30px 0 0;
+  padding-top: 30px;
+  background: #e6dbd3 none repeat scroll 0 0;
+}
+.footer-title {
+  font-size: 1.2em;
+  font-weight: 500;
+}
 .single-footer ul li a {
-  color: #757575;
+  color: #5e5e5e;
   text-transform: capitalize;
   text-decoration: none;
 }
-
 .single-footer.quick-links li:before {
-  background: #757575 none repeat scroll 0 0;
+  background: #5e5e5e none repeat scroll 0 0;
   content: "";
   height: 5px;
   left: 0;
@@ -220,144 +148,12 @@ footer{
   padding-left: 15px;
   position: relative;
 }
-
 .footer-bottom {
   background: #e1e1e1 none repeat scroll 0 0;
-  padding: 20px;
-}
-.copyright > p {
-  margin-bottom: 0;
-}
-  
-  /* Estilo básico para el formulario */
-
-#Formulario {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 450px;
-    background-color: #f1f1f1;
-    border-radius: 5px;
-    padding: 20px;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
-    display: none;
-  }
-  
-  #Formulario h2 {
-    text-align: center;
-    font: bold;
-    margin-top: 0;
-  }
-  
-  #Formulario form {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  #Formulario form .form-floating {
-    margin-bottom: 20px;
-  }
-  
-  #Formulario form .text {
-    margin-bottom: 20px;
-  }
-  
-  #Formulario form button {
-    margin-top: 20px;
-  }
-/* Footer */
-.pie {
-  background-color: #f5f5f5;
-  padding: 20px;
-  margin-right: 50px;
+  padding: 10px;
 }
 
-.img3 {
-  border-radius: 4px;
-  padding: 5px;
-  width: 400px;
-  height: 350px;
-  
-}
-
-.section div{
-  display: flex;
-  flex-direction: column;
-  grid-template-rows: auto auto;
-  gap: 30px;
-  align-items: center;
-}
-
-.logo div {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-width: 100px;
-  margin-left: 50px;
-  flex: auto;
-  height: 70px;
-  margin-right: 10px;
-  padding: 20px;
-  vertical-align: center;
-
-}
-
-.Contactenos,
-.Sobre-Nosotros,
-.Sitio-Web {
- 
-  align-items: center;
-  max-width: 200px;
-  margin-right: 20px;
-  margin-left: 20px;
-  padding: 30px;
-}
-
-.Contactenos h5,
-.Sobre-Nosotros h5,
-.Sitio-Web h5 {
-  margin-bottom: 10px;
-}
-
-.Contactenos a,
-.Sobre-Nosotros a,
-.Sitio-Web a {
-  display: block;
-  margin-bottom: 5px;
-  color: #333;
-  text-decoration: none;
-}
-
-.Contactenos a:hover,
-.Sobre-Nosotros a:hover,
-.Sitio-Web a:hover {
-  color: #1860dc;
-}
-
-.redes {
-  display: flex;
-  align-items: center;
-}
-
-.redes a {
-  margin-right: 50px;
-  left: auto;
-  top: auto;
-  padding-top: 10px;
-  padding-left: 25px;
-}
-/* Api */
-
-
-
-h1 {
-  font-size: 2em;
-  text-align: center;
-  margin-top: 0;
-  margin-bottom: 20px;
-  color: #c22020;
-}
-
+/* Estilos API*/
 .weather-data {
   display: flex;
   flex-direction: column;
@@ -365,20 +161,18 @@ h1 {
   justify-content: center;
   margin-top: 20px;
 }
-
 .weather-data__item {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  font-size: 1.2em;
+  font-size: 1em;
   margin-bottom: 10px;
   padding: 10px;
   background-color: #f2f2f2;
   border-radius: 5px;
   box-shadow: 0 3px 6px rgba(0,0,0,0.1);
 }
-
 .weather-data__icon {
   margin-right: 10px;
 }
