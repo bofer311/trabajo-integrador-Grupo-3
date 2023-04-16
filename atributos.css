@@ -176,3 +176,52 @@ section {
 .weather-data__icon {
   margin-right: 10px;
 }
+
+/* Datos del tiempo */
+
+.container1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  padding: 20px;
+
+}
+
+.weather-data {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  margin-top: 20px;
+}
+
+.weather-data__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.weather-data__icon {
+  width: 50px;
+  height: 50px;
+}
+
+.weather-data__text {
+  margin-top: 10px;
+}
+/* Redicionadores */
+
+#musculos {
+  padding-top: 500px;
+}
+
+#distintas {
+  padding-top: 500px;
+}
+
+#arrugas {
+  padding-top: 500px;
+}
