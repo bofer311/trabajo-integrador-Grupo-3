@@ -34,11 +34,21 @@ function showForm() {
   formVisible = true;
 }
 
-// function hideForm() {
-//   var form = document.getElementById('Formulario');
-//   form.style.display = 'none';
-//   button.textContent = 'Contactenos!';
-//   button.removeEventListener('dblclick', hideForm);
-//   button.addEventListener('click', showForm);
-//   formVisible = false;
-// }
+function submitForm() {
+  const name = document.getElementById("recipient-name").value;
+  const message = document.getElementById("message-text").value;
+
+  // Create new jsPDF instance
+  const doc = new jsPDF();
+  doc.text(`Nombre: ${name}`, 20, 20);
+  doc.text(`Mensaje: ${message}`, 20, 30);
+
+  // Save PDF
+  doc.save("mensaje.pdf");
+
+  // Reset form
+  document.getElementById("form").reset();
+
+  // Hide modal
+  $("#exampleModal").modal("hide");
+}
