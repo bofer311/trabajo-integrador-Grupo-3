@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="attr_reg.css">
+    <script src="https://kit.fontawesome.com/cd7385c15a.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+<div>
+    <a href="index.html" class="btn-cancelar" tittle="Cancelar registro">X</a>
+</div>
+
+<div class="container">
+    <header>
+    <h2>Registro</h2>
+    </header>
+    <div class="process-bar">
+        <div class="paso">
+            <p>Datos</p>
+            <div class="num">
+                <span>1</span>
+            </div>
+            <div class="check fas fa-check"></div>
+        </div>
+        <div class="paso">
+            <p>Contacto</p>
+            <div class="num">
+                <span>2</span>
+            </div>
+            <div class="check fas fa-check">
+            </div>
+        </div>
+        <div class="paso">
+            <p>Fecha</p>
+            <div class="num">
+                <span>2</span>
+            </div>
+            <div class="check fas fa-check"></div>
+        </div>
+        <div class="paso">
+            <p>Confirmar</p>
+            <div class="num">
+                <span>4</span>
+            </div>
+            <div class="check fas fa-check"></div>
+        </div>
+    </div>
+    <div class="form-princ">
+      <form action="#">
+          <!-- Pagina 1 -->
+          <div class="pagina movPag">
+              <div class="titulo">Información personal</div>
+              <div class="campo">
+                <div class="label">Nombres: <b class="error" id="nombres-error"></b></div>
+                <input type="text" id="nombres" placeholder="Nombres">
+              </div>
+              <div class="campo">
+                <div class="label">Apellido: <b class="error" id="apellido-error"></b></div>
+                <input type="text" id="apellido" placeholder="Apellido">
+              </div>
+              <div class="campo">
+                <div class="label">DNI: <b class="error" id="dni-error"></b></div>
+                <input type="text" id="dni" placeholder="dni">
+              </div>
+              <div class="campo sigPag">
+                <button>Siguiente</button>
+              </div>
+          </div>
+          <!-- Pagina 2 -->
+          <div class="pagina">
+            <div class="titulo">Información de contacto</div>
+            <div class="campo">
+                <div class="label">Correo Electrónico: <b class="error" id="correo-error"></b></div>
+                <input type="text" id="correo" placeholder="Correo Electrónico">
+            </div>
+            <div class="campo">
+                <div class="label">Número de teléfono: <b class="error" id="numCel-error"></b></div>
+                <input type="text" id="numCel" placeholder="Número de teléfono">
+            </div>
+            <div class="campo">
+                <div class="label">Dirección:<b class="error" id="direccion-error"></b></div>
+                <input type="text" id="direccion" placeholder="Dirección">
+            </div>
+            <div class="campo btns">
+                <button class="volver-pag1 volver">Atrás</button>
+                <button class="adelante-pag3 adelante">Siguiente</button>
+            </div>
+        </div>
+          
+          <!-- Pagina 3 -->
+          <div class="pagina">
+            <div class="titulo">Fecha disponible</div>
+            <div class="campo">
+                <div class="label">Fecha Nacimiento: <b class="error" id="fechaNac-error"></b></div>
+                <input type="date" id="fechaNac" max="2010-12-31" value="2010-01-01">
+            </div>
+            <div class="campo">
+                <div class="label">Hora: <b class="error" id="hora-error"></b></div>
+                <input type="time" id="hora" value="2010-01-01">
+            </div>
+            <div class="campo">
+                <div class="label">Tratamiento: <b class="error" id="tratamiento-error"></b></div>
+                <select id="tratamiento">
+                    <option value="-1" disabled selected>Elige una opción</option>
+                    <option value="0">Toxina Botulínica</option>
+                    <option value="1">Hialuronico</option>
+                    <option value="2">PRP</option>
+                </select>
+            </div>
+            <div class="campo btns">
+                <button class="volver-pag2 volver">Atrás</button>
+                <button class="adelante-pag4 adelante">Siguiente</button>
+            </div>
+        </div>
+
+        <!-- Pagina 4 -->
+            <div class="pagina">
+                <div class="titulo">Confirmar información</div>
+
+                <!-- <div class="campo">
+                    <div class="label">Correo Electrónico:</div>
+                    <input type="text" id="correo" placeholder="Correo Electrónico">
+                </div>
+                <div class="campo">
+                    <div class="label">Número de teléfono:</div>
+                    <input type="text" id="numCel" placeholder="Número de teléfono">
+                </div>
+                <div class="campo">
+                    <div class="label">Dirección:</div>
+                    <input type="text" id="direccion" placeholder="Dirección">
+                </div> -->
+                <div class="campo btns">
+                    <button class="volver-pag3 volver">Atrás</button>
+                    <button class="fin">Fin</button>
+                </div>
+            </div>
+      </form>
+    </div>
+</div>
+</body>
+<script src="scripts_reg.js"></script>
+</html>
