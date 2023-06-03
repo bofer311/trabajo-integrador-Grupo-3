@@ -12,6 +12,19 @@
     <script src="jspdf.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/signature_pad@4.0.0/dist/signature_pad.umd.min.js"></script>
     <link rel="stylesheet" href="app.js">
+    <!-- jquery js -->
+    <script src="lib/jquery.js"></script>
+    <!-- Descripcion -->
+    <meta name="description" content="Pagina Web componentes de bootstrap, angular, jquery, react y muchas cosas mas">
+    <!-- Bootstrap enlace css -->
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
+    <!-- iconos -->
+    <link rel="stylesheet" href="resources/iconos/fonts/style.css">
+    <!-- Letras -->
+    <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    
 <!--Arrancando la pagina-->
 <body>
  <header>
@@ -41,6 +54,7 @@
                 <ul class="dropdown-menu" >
                     <li><a class="nav-item dropdown" href="#musculos">Toxina Botulínica</a></li>
                     <li><a class="nav-item dropdown" href="#distintas">Hialuronico</a></li>
+                    <li><a class="nav-item dropdown" href="#distintas">Lifting sin cirugia</a></li>
                     <li><a class="nav-item dropdown" href="#arrugas">PRP</a></li>
                 </ul>
               </li>
@@ -92,13 +106,13 @@
       <div class="row">
           <div class="col-lg-6 col-sm-12 col-xs-12">
               <div class="about-img">
-                  <img src="img/003_1-standard.jpg" alt="">
+                  <img src="img/foto SUSANA CON GENTE.jpg" alt="" style="width: 100%; height: auto;">
               </div>
           </div>
           <div class="col-lg-6 col-sm-12 col-xs-12">
               <div id="about-desc">
-                  <h6>Welcome a Space Dra Irrazabal</h6>
-                  <h1>MEDICINA ESTETICA</h1>
+                  <h6>Bienvenidos a</h6>
+                  <h1>BELLEZA INTEGRAL</h1>
                   <p id ="Nosotros": style="text-align: justify;">La Dra. Irrazabal es una profesional de la medicina estética con amplia experiencia en el campo de los tratamientos minimamente invasivos para el cuidado de la piel y la belleza. Su enfoque es brindar soluciones personalizadas a las necesidades de cada paciente, utilizando técnicas innovadoras y tecnologías de vanguardia para obtener resultados óptimos. La Dra. Irrazabal es reconocida por su dedicación y compromiso en el cuidado de sus pacientes, y su pasión por mantenerse actualizada en los últimos avances de la medicina estética. Con su enfoque centrado en el paciente y su experiencia en el campo, la Dra. Irrazabal es una excelente opción para aquellos que buscan mejorar su apariencia y su autoestima.</p>
                   <a href="#">Saber mas...</a>
               </div>
@@ -113,16 +127,19 @@
     <div class="row">
       <div class="column">
         <h3>Toxina Botulínica</h3>
-        <p id ="": style="text-align: justify ; padding-left: 30px;">Las inyecciones de Toxina Botulínica bloquean determinadas señales químicas de los nervios, principalmente las señales que hacen que los músculos se contraigan. El uso más frecuente de estas inyecciones es relajar temporariamente los <a id="musculos">músculos</a> faciales que causan arrugas en la frente y alrededor de los ojos.</p>
+        <p id ="": style="text-align: justify ; padding-left: 30px;"><br><br>Las inyecciones de Toxina Botulínica bloquean determinadas señales químicas de los nervios, principalmente las señales que hacen que los músculos se contraigan. El uso más frecuente de estas inyecciones es relajar temporariamente los <a id="musculos">músculos</a> faciales que causan arrugas en la frente y alrededor de los ojos.</p>
       </div>
       <div class="column">
         <h3>Acido hialurónico</h3>
-        <p id ="": style="text-align: justify;">El ácido hialurónico es un polisacárido presente de forma natural en nuestras articulaciones, cartílagos y piel. Dependiendo de la zona en la que lo encontramos, cumple <a id="distintas">distintas</a> funciones: En las articulaciones ayuda a evitar que se produzcan fricciones dolorosas. En los cartílagos funciona como reconstituyente.</p>
+        <p id ="": style="text-align: justify;"><br><br>El ácido hialurónico es un polisacárido presente de forma natural en nuestras articulaciones, cartílagos y piel. Dependiendo de la zona en la que lo encontramos, cumple <a id="distintas">distintas</a> funciones: En las articulaciones ayuda a evitar que se produzcan fricciones dolorosas. En los cartílagos funciona como reconstituyente.</p>
+      </div>
+      <div class="column">
+        <h3>Lifting sin cirugia-DERMORAY</h3>
+        <p id ="PRP": style="text-align: justify ;padding-right: 30px;">Con el paso del tiempo es inevitable que la piel se arrugue y pierda su elasticidad pero con #DermoRay podés brindarle a tus pacientes la posibilidad de revertir el envejecimiento.Beneficios que brinda un tratamiento con nuestro equipo.Remueve arrugas profundas superficiales,verrugas y lesiones de pigmentación.Corrección de cicatrices.Puede ser aplicado en zonas del cuerpo y el rostro</p>
       </div>
       <div class="column">
         <h3>Plasma Rico en Plaquetas</h3>
-        <p id ="PRP": style="text-align: justify ;padding-right: 30px;">El Plasma Rico en Plaquetas permite mejorar la calidad, grosor, elasticidad y firmeza de la piel, que queda más luminosa, menos flácida y más lisa. Por eso es la mejor opción para tratar las <a id="arrugas">arrugas</a>. No solo rejuvenece sino que además retrasa el proceso de envejecimiento.</p>
-      </div>
+        <p id ="PRP": style="text-align: justify ;padding-right: 30px;"><br><br>El Plasma Rico en Plaquetas permite mejorar la calidad, grosor, elasticidad y firmeza de la piel, que queda más luminosa, menos flácida y más lisa. Por eso es la mejor opción para tratar las <a id="arrugas">arrugas</a>. No solo rejuvenece sino que además retrasa el proceso de envejecimiento.</p>
     </div>
    </div>
 </div>
@@ -193,7 +210,7 @@
   </div>
 </div>
 
-<!-- Nosotros -->
+<!-- Nosotros
 <div class="container" id="nosotros">
   <div style="display:flex; flex-wrap:wrap;">
    <div class="card">
@@ -236,7 +253,7 @@
       <a class="fa-brands fa-whatsapp fa-bounce fa-lg" style="color: #37e407;"></a></p>
     </div>
   </div>
-</div>
+</div> -->
 
 <!-- Cuadro de mensajes -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -266,11 +283,104 @@
   </div>
 </div>
 
+<!-- footer -->
+<div class="container-fluid site-footer">
+  <div class="row">
+      <div class="col-md-6 espaciorooter col-sm-12">
+          <h6>About</h6>
+          <p class="text-justify ">Dra Susana Irrazabal </i> 
+              "Belleza integral destaca el enfoque integral de la belleza, abarcando tratamientos faciales, corporales y de bienestar emocional. Sugiere que la belleza va más allá de la apariencia física y se centra en el equilibrio general.</p>
+      </div>
+      <div class="col-md-3 espaciofooter3 col-sm-6">
+          <h6>Categories</h6>
+          <ul>
+              <li class="listaopcion">
+                  Botox
+              </li>
+              <li class="listaopcion">
+                  Hialuronico
+              </li>
+              <li class="listaopcion">
+                  Lifting sin cirugia
+              </li>
+              <li class="listaopcion">
+                  Plasma rico en Plaquetas
+              </li>
+          </ul>
+      </div>
+      <div class="col-md-3 espaciofooter3 col-sm-6">
+          <h6>Quick Links</h6>
+          <ul>
+              <li class="listaopcion">
+                  About Us
+              </li>
+              <li class="listaopcion">
+                  Contact Us
+              </li>
+              <li class="listaopcion">
+                  Contribute
+              </li>
+              <li class="listaopcion">
+                  Privacy Policy
+              </li>
+              <li class="listaopcion">
+                  Sitemap
+              </li>
+          </ul>
+      </div>
+  </div>
+  <div class="row">
+      <div class="col-md-12">
+          <hr class="hrfooter" />
+      </div>
+  </div>
+  <div class="row espaciocopyright">
+      <div class="col-md-8 col-sm-6 col-12 copyright-tex">
+          <p class="textp">Copyright &copy; 2023 All Rights Reserved by 
+              <a href="#" style="color:#3421df;">Coati Care</a>.
+          </p>
+      </div>
+
+      <div class="col-md-4 col-sm-6 col-12 text-right">
+
+          <ul class="listaicon">
+              <li class="itemslista text-center facebook">
+                  <i class="icon-instagram"></i>
+              </li>
+              <li class="itemslista text-center twitter">
+                  <i class="icon-twitter"></i>                        
+              </li>
+              <li class="itemslista text-center  linkedin">
+                  <i class="icon-facebook"></i>
+              </li>
+          </ul>
+
+      </div>
+  </div>
+</div>
 
 
 
 
-<!-- Footer -->
+
+
+
+
+
+
+<!-- Scripts librerias de js -->
+<!-- Angular js -->
+<script src="lib/angular.js"></script>
+<!-- cdn de bootstrap js -->
+<script src="lib/bootstrap/js/bootstrap.js"></script>
+<!-- script de la pagina js principal -->
+<script src="js/script.js"></script>  
+
+
+
+
+
+<!-- Footer
 <footer>
   <div class="footer">
     <div class="footer-top ptb-100">
@@ -347,7 +457,7 @@ lorem ipsome do or sit amt  labore et dolor </p>
         </div>
     </div>
 </div>
-</footer>
+</footer> -->
 
 <!-- API Tiempo -->
 <script>

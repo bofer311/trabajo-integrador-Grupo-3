@@ -18,6 +18,7 @@
 }
 .navbar-nav {
   margin-right: 80px;
+  color:#5e412a;
 }
 .nav-item a:hover{
   background: #ccae93;
@@ -33,7 +34,7 @@
 }
 .nav-item {
   text-decoration: none;
-  color: black;
+  color: #FFF;
 }
 .nav-item li{
   text-align: center;
@@ -52,7 +53,7 @@ section {
 
 /* espaciado bienvenida*/
 .Description {
-  margin: 80px 0 50px;
+  margin: 120px 0 100px;
 }
 
 /*Estilo seccion Description*/
@@ -132,7 +133,7 @@ section {
   margin-bottom: 5px;
 }
 
-/* Estilos al Footer */
+/* Estilos al Footer
 .footer-top {
   margin: 30px 0 0;
   padding-top: 30px;
@@ -169,7 +170,7 @@ section {
 .footer-bottom {
   background: #e1e1e1 none repeat scroll 0 0;
   padding: 10px;
-}
+} */
 
 /* Estilos API*/
 .container1 h1 {
@@ -252,4 +253,87 @@ section {
 
 .tratamientos{
   margin: 90px 0 60px;
+}
+
+/*footer*/
+/*fondo*/
+.site-footer{
+    background-color:#8b7460;
+    padding:0px 0 0px;
+    font-size:15px;
+    line-height:24px;
+    color:#f2f2f2;
+}
+/*color h6*/
+h6{
+    color: #FFF;
+    font-size: 25px !important;
+    padding: 3% 0% !important;
+}
+/*espacio*/
+.espaciorooter{
+    padding: 3% 3% !important ;
+}
+/*espacio*/
+.espaciofooter3{
+    padding: 3% 3% 3% 5% !important ;
+
+}
+/*eliminacion de estilos de la lista*/
+.listaopcion{
+    list-style-type: none !important;
+    text-decoration: none !important;    
+}
+/*estilo del hr*/
+.hrfooter{
+    background: #fff;
+    margin: 1% 5% !important;
+    height: 1px;
+}
+/*espacio del texto*/
+.espaciocopyright{
+    padding: 1% 5% 4% 5% !important;
+}
+/*espacio*/
+.copyright-tex{
+    padding-top: 2% !important;
+}
+/*estilos de iconos*/
+.socialicons{
+    text-decoration: none !important;
+    list-style-type: none !important;
+}
+/*estilo de items*/
+.listaicon{
+    text-decoration: none;
+    list-style: none;
+    padding-top: 3% !important
+}
+/*lista items*/
+.itemslista{
+    background: #33353d !important;
+    border-radius: 100% !important;
+    width:40px;
+    height:40px;
+    line-height:40px;
+    margin-left:6px;
+    margin-right:0;
+    display: inline-block !important;
+}
+/*efectos hover*/
+.facebook:hover{
+    background: #3b5998 !important;
+    color: #FFF;
+}
+.twitter:hover{
+    background: #00aced !important;
+    color: #FFF;
+}
+.dribbble:hover{
+    background: #ea4c89 !important;
+    color: #FFF;
+}
+.linkedin:hover{
+    background: #007bb6 !important;
+    color: #FFF;
 }
