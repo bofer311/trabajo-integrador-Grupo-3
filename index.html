@@ -62,12 +62,7 @@
                   <a class="nav-link" href="#nosotros">Nosotros</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#" role="button" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap">
-                  Contacto
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" id="turno" href="registro.html">Turnos</a>
+                <a class="nav-link" id="turno" href="registro.html" target="_blank">Turnos</a>
               </li>
             </ul>
           </div>
@@ -466,7 +461,7 @@ lorem ipsome do or sit amt  labore et dolor </p>
 <!-- API Tiempo -->
 <script>
   const apiKey = "25905abc18b684d2c27165712cc6eb44";
-  const apiUrl = "https://api.openweathermap.org/data/2.5/weather?q=Buenos%20Aires,AR&units=metric&appid=" + apiKey;
+  const apiUrl = "https://api.openweathermap.org/data/2.5/weather?q=Posadas,AR&units=metric&appid=" + apiKey;
 
   fetch(apiUrl)
     .then(response => response.json())

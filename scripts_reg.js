@@ -1,217 +1,72 @@
-const movPag = document.querySelector(".movPag");
-const btn_adelante2 = document.querySelector(".sigPag");
+    // Configurar EmailJS con tu información de cuenta
+    emailjs.init('YOUR_USER_ID');
 
-const btn_atras1 = document.querySelector(".volver-pag1");
-const btn_adelante3 = document.querySelector(".adelante-pag3");
-const btn_atras2 = document.querySelector(".volver-pag2");
-const btn_adelante4 = document.querySelector(".adelante-pag4");
-const btn_atras3 = document.querySelector(".volver-pag3");
-const btn_final = document.querySelector(".fin");
+    // Capturar el evento de clic en el botón "Enviar"
+    document.querySelector('.enviar').addEventListener('click', function(event) {
+        event.preventDefault(); // Evitar el envío del formulario por defecto
 
-const progressText = document.querySelectorAll(".paso p");
-const progressCheck = document.querySelectorAll(".paso .check");
-const num = document.querySelectorAll(".paso .num");
+        // Obtener los valores de los campos de entrada
+        var nombres = document.getElementById('nombres').value;
+        var telefono = document.getElementById('telefono').value;
+        var correo = document.getElementById('correo').value;
 
-let max = 4;
-let cont = 1;
+        // Realizar la validación de los campos aquí si es necesario
 
-btn_adelante2.addEventListener("click", function(e){
-  e.preventDefault();
-  var nombres = document.getElementById("nombres").value;
-  var apellido = document.getElementById("apellido").value;
-  var dni = document.getElementById("dni").value;
+        // Enviar el correo electrónico
+        var templateParams = {
+            nombres: nombres,
+            telefono: telefono,
+            correo: correo
+        };
 
-  if ( nombres=="" && apellido=="" && dni==""){
-    document.getElementById("nombres-error").innerHTML = "* Este campo no puede quedar vacío."
-    document.getElementById("nombres").style.borderColor="#DA2A33"
-    document.getElementById("apellido-error").innerHTML = "* Este campo no puede quedar vacío."
-    document.getElementById("apellido").style.borderColor="#DA2A33"
-    document.getElementById("dni-error").innerHTML = "* Este campo no puede quedar vacío."
-    document.getElementById("dni").style.borderColor="#DA2A33"
-    
-  }else if ( (nombres=="" || apellido=="" || dni=="") ||
-             (nombres.length<2 || apellido.length<2 || dni.length!=8) ||
-             (!verificarNombre(nombres) || !verificarNombre(apellido) || !verificardni(dni))
-           ){
-    
-    if ( nombres=="" ){
-      document.getElementById("nombres-error").innerHTML = "* Este campo no puede quedar vacío."
-      document.getElementById("nombres").style.borderColor="#DA2A33"      
-    }else if ( nombres.length<2 ){
-      document.getElementById("nombres-error").innerHTML = "* Debe tener 2 o más caractéres."
-      document.getElementById("nombres").style.borderColor="#DA2A33"      
-    }else if ( !verificarNombre(nombres) ){
-      document.getElementById("nombres-error").innerHTML = "* Dato no válido."
-      document.getElementById("nombres").style.borderColor="#DA2A33"      
-    }else {
-      document.getElementById("nombres-error").innerHTML = ""
-      document.getElementById("nombres").style.borderColor="lightgrey"      
+        emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams)
+            .then(function(response) {
+                console.log('Correo enviado:', response.status, response.text);
+                // Realizar cualquier acción adicional después de enviar el correo electrónico
+            }, function(error) {
+                console.error('Error al enviar el correo:', error);
+                // Realizar cualquier acción adicional en caso de error
+            });
+    });
+
+    // Variables globales
+    var paginaActual = 1;
+    var numPaginas = document.querySelectorAll('.pagina').length;
+
+    // Función para cambiar a la siguiente página
+    function siguientePagina() {
+        if (paginaActual < numPaginas) {
+            document.querySelector('.pagina:nth-child(' + paginaActual + ')').classList.remove('movPag');
+            document.querySelector('.pagina:nth-child(' + (paginaActual + 1) + ')').classList.add('movPag');
+            actualizarPasos();
+            paginaActual++;
+        }
     }
 
-    if ( apellido=="" ){
-      document.getElementById("apellido-error").innerHTML = "* Este campo no puede quedar vacío."
-      document.getElementById("apellido").style.borderColor="#DA2A33"      
-    }else if ( apellido.length<2 ){
-      document.getElementById("apellido-error").innerHTML = "* Debe tener 2 o más caractéres."
-      document.getElementById("apellido").style.borderColor="#DA2A33"      
-    }else if ( !verificarNombre(apellido) ){
-      document.getElementById("apellido-error").innerHTML = "* Dato no válido."
-      document.getElementById("apellido").style.borderColor="#DA2A33"      
-    }else {
-      document.getElementById("apellido-error").innerHTML = ""
-      document.getElementById("apellido").style.borderColor="lightgrey"      
+    // Función para cambiar a la página anterior
+    function paginaAnterior() {
+        if (paginaActual > 1) {
+            document.querySelector('.pagina:nth-child(' + paginaActual + ')').classList.remove('movPag');
+            document.querySelector('.pagina:nth-child(' + (paginaActual - 1) + ')').classList.add('movPag');
+            actualizarPasos();
+            paginaActual--;
+        }
     }
 
-    if ( dni=="" ){
-      document.getElementById("dni-error").innerHTML = "* Este campo no puede quedar vacío."
-      document.getElementById("dni").style.borderColor="#DA2A33"      
-    }else if ( dni.length!=8 ){
-      document.getElementById("dni-error").innerHTML = "* Debe tener 8 digitos."
-      document.getElementById("dni").style.borderColor="#DA2A33"      
-    }else if ( !verificardni(dni) ){
-      document.getElementById("dni-error").innerHTML = "* Debe ingresar solo números."
-      document.getElementById("dni").style.borderColor="#DA2A33"      
-    }else {
-      document.getElementById("dni-error").innerHTML = ""
-      document.getElementById("dni").style.borderColor="lightgrey"      
-    }
-    
-  } else {
-    document.getElementById("nombres-error").innerHTML = ""
-    document.getElementById("nombres").style.borderColor="lightgrey"
-    document.getElementById("apellido-error").innerHTML = ""
-    document.getElementById("apellido").style.borderColor="lightgrey"
-    document.getElementById("dni-error").innerHTML = ""
-    document.getElementById("dni").style.borderColor="lightgrey"
-
-    movPag.style.marginLeft = "-25%";
-    num[cont - 1].classList.add("active");
-    progressText[cont - 1].classList.add("active");
-    progressCheck[cont - 1].classList.add("active");
-    cont += 1;
+    // Función para actualizar los pasos del formulario
+    function actualizarPasos() {
+        var pasos = document.querySelectorAll('.paso');
+        for (var i = 0; i < pasos.length; i++) {
+            pasos[i].classList.remove('active');
+        }
+        pasos[paginaActual - 1].classList.add('active');
     }
 
-  function verificarNombre($n){
-    var ExpRegular_Nombre = /^[A-Za-zÑñÁÉÍÓÚáéíóúüÜ]+((?:[\s{1}][A-Za-zÑñÁÉÍÓÚáéíóúüÜ]+)+)?$/;
-    return ExpRegular_Nombre.test($n);
-  }
-
-  function verificardni($m){
-    var ExpRegular_dni = /^[\d]+$/;
-    return ExpRegular_dni.test($m);
-  }
-});
-
-
-btn_adelante3.addEventListener("click", function(e){
-
-    e.preventDefault();
-    
-    var correo = document.getElementById("correo").value;
-    var numCel = document.getElementById("numCel").value;
-    var direccion = document.getElementById("direccion").value;
-  
-    if ( correo=="" && numCel=="" && direccion==""){
-  
-      document.getElementById("correo-error").innerHTML = "* Este campo no puede quedar vacío."
-      document.getElementById("correo").style.borderColor="#DA2A33"
-      document.getElementById("numCel-error").innerHTML = "* Este campo no puede quedar vacío."
-      document.getElementById("numCel").style.borderColor="#DA2A33"  
-      document.getElementById("direccion-error").innerHTML = "* Este campo no puede quedar vacío."
-      document.getElementById("direccion").style.borderColor="#DA2A33" 
-  
-    }else if ( (correo=="" || numCel=="") || 
-               (correo.length<6 || numCel.length!=9 || direccion<3) || 
-               (!verificarCorreo(correo) || !verificarNumCel(numCel) || !verificardireccion(direccion))
-             ){
-      
-      if ( correo=="" ){
-        document.getElementById("correo-error").innerHTML = "* Este campo no puede quedar vacío."
-        document.getElementById("correo").style.borderColor="#DA2A33"      
-      }else if ( correo.length<6 ){
-        document.getElementById("correo-error").innerHTML = "* Debe tener 6 o más caractéres."
-        document.getElementById("correo").style.borderColor="#DA2A33"      
-      }else if ( !verificarCorreo(correo) ){
-        document.getElementById("correo-error").innerHTML = "* Ingreso de datos inválidos."
-        document.getElementById("correo").style.borderColor="#DA2A33"      
-      }else {
-        document.getElementById("correo-error").innerHTML = ""
-        document.getElementById("correo").style.borderColor="lightgrey"      
-      }
-  
-      if ( numCel=="" ){
-        document.getElementById("numCel-error").innerHTML = "* Este campo no puede quedar vacío."
-        document.getElementById("numCel").style.borderColor="#DA2A33"      
-      }else if ( numCel.length!=9 && !verificarNumCel(numCel) ){
-        document.getElementById("numCel-error").innerHTML = "* Debe ingresar solo números."
-        document.getElementById("numCel").style.borderColor="#DA2A33"      
-      }else if ( numCel.length!=9 ){
-        document.getElementById("numCel-error").innerHTML = "* Debe tener 9 dígitos."
-        document.getElementById("numCel").style.borderColor="#DA2A33"      
-      }else if ( !verificarNumCel(numCel) ){
-        document.getElementById("numCel-error").innerHTML = "* Ingreso de datos inválidos."
-        document.getElementById("numCel").style.borderColor="#DA2A33"      
-      }else {
-        document.getElementById("numCel-error").innerHTML = ""
-        document.getElementById("numCel").style.borderColor="lightgrey"      
-      }
-      
-      if ( direccion=="" ){
-        document.getElementById("direccion-error").innerHTML = "* Este campo no puede quedar vacío."
-        document.getElementById("direccion").style.borderColor="#DA2A33"      
-      }else if ( direccion.length<3 && !verificardireccion(direccion) ){
-        document.getElementById("direccion-error").innerHTML = "* asdasdasd."
-        document.getElementById("direccion").style.borderColor="#DA2A33"      
-      }else if ( direccion.length<3 ){
-        document.getElementById("direccion-error").innerHTML = "* Debe tener 9 dígitos."
-        document.getElementById("direccion").style.borderColor="#DA2A33"      
-      }else if ( !verificardireccion(direccion) ){
-        document.getElementById("direccion-error").innerHTML = "* Ingreso de datos inválidos."
-        document.getElementById("direccion").style.borderColor="#DA2A33"      
-      }else {
-        document.getElementById("direccion-error").innerHTML = ""
-        document.getElementById("direccion").style.borderColor="lightgrey"      
-      }
-    } else {
-  
-      document.getElementById("correo-error").innerHTML = ""
-      document.getElementById("correo").style.borderColor="lightgrey"
-      document.getElementById("numCel-error").innerHTML = ""
-      document.getElementById("numCel").style.borderColor="lightgrey"
-      document.getElementById("direccion-error").innerHTML = ""
-      document.getElementById("direccion").style.borderColor="lightgrey" 
-
-  
-      movPag.style.marginLeft = "-50%";
-      num[cont - 1].classList.add("active");
-      progressText[cont - 1].classList.add("active");
-      progressCheck[cont - 1].classList.add("active");
-      cont += 1;
-  
-    }
-  
-    function verificarCorreo($n){
-      var ExpRegular_Correo = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
-      return ExpRegular_Correo.test($n);
-  
-  /*     if ($n.match(ExpRegular_Correo)){
-        return true
-      }else{
-        return false;
-      } */
-  
-    }
-  
-    function verificarNumCel($m){
-      var ExpRegular_Num = /^[\d]+$/;
-      return ExpRegular_Num.test($m);
-    }
-    
-    function verificardireccion($n){
-        var ExpRegular_direccion = /^[A-Za-zÑñÁÉÍÓÚáéíóúüÜ]+((?:[\s{1}][A-Za-zÑñÁÉÍÓÚáéíóúüÜ]+)+)?$/;
-        return ExpRegular_direccion.test($n);
-      }
-  });
+    // Eventos de clic para los botones "Siguiente" y "Atrás"
+    document.querySelector('.adelante-pag1').addEventListener('click', siguientePagina);
+    document.querySelector('.adelante-pag2').addEventListener('click', siguientePagina);
+    document.querySelector('.volver-pag1').addEventListener('click', paginaAnterior);
+    document.querySelector('.volver-pag2').addEventListener('click', paginaAnterior);
 
 
 
@@ -228,27 +83,6 @@ btn_adelante3.addEventListener("click", function(e){
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-btn_adelante4.addEventListener("click", function(e){
-    e.preventDefault();
-    movPag.style.marginLeft = "-75%";
-    num[cont - 1].classList.add("active");
-    progressCheck[cont - 1].classList.add("active");
-    progressText[cont - 1].classList.add("active");
-    cont += 1;
-});
 
 btn_final.addEventListener("click", function(e){
     e.preventDefault();
@@ -277,11 +111,3 @@ btn_atras2.addEventListener("click", function(e){
     cont -= 1;
 });
 
-btn_atras3.addEventListener("click", function(e){
-    e.preventDefault();
-    movPag.style.marginLeft = "-50%";
-    num[cont - 2].classList.remove("active");
-    progressCheck[cont - 2].classList.remove("active");
-    progressText[cont - 2].classList.remove("active");
-    cont -= 1;
-});
