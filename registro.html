@@ -34,7 +34,7 @@
         <div class="col-lg-6">
             <div class="form-container">
                 <h2 class="text-center">Solicite su Turno</h2>
-                <form action="https://formsubmit.co/susanairrazabal76@gmail.com"method="POST">
+                <form action="https://formsubmit.co/susanairrazabal76@gmail.com" method="POST">
                     <!-- Contenido del formulario -->
                     <div class="form-group">
                         <label for="nombres">Nombres:</label>
@@ -71,12 +71,29 @@
                             </select><br>
                         </div><br>
                     </div>
-                    <button type="submit" class="btn btn-primary btn-block">Enviar</button>
+                    <button type="submit" onclick="disableSelectedOption()" class="btn btn-primary btn-block">Enviar</button>
                 </form>
             </div>
         </div>
     </div>
+    <script>
+        function disableSelectedOption() {
+            var selectedDay = document.getElementById("diaAtencion").value;
+            var selectedTime = document.getElementById("horario").value;
+            var options = document.getElementById("horario").options;
+            
+            for (var i = 0; i < options.length; i++) {
+                if (options[i].text === selectedTime) {
+                    options[i].disabled = true;
+                    break;
+                }
+            }
+            
+            alert("Turno reservado para el día " + selectedDay + " a las " + selectedTime);
+        }
+    </script>
 </body>
+
 </html>
 
 
