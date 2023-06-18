@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -34,9 +34,9 @@
         <div class="col-lg-6">
             <div class="form-container">
                 <h2 class="text-center">Solicite su Turno</h2>
-                <form action="https://formsubmit.co/susanairrazabal76@gmail.com" method="POST">
+                <form action="https://formsubmit.co/susanairrazabal76@gmail.com" method="POST"> -->
                     <!-- Contenido del formulario -->
-                    <div class="form-group">
+                    <!-- <div class="form-group">
                         <label for="nombres">Nombres:</label>
                         <input type="text" class="form-control" id="nombres" placeholder="Escribe tu nombre">
                     </div>
@@ -94,7 +94,118 @@
     </script>
 </body>
 
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        body {
+            background-image: url('img/rostro-femenino-piel.jpg'); /* Ruta de la imagen de fondo */
+            background-size: cover; /* Ajustar imagen al tamaño del contenedor */
+            background-repeat: no-repeat; /* Evitar repetición de la imagen */
+            background-position: center center; /* Centrar la imagen */
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh; /* Ajustar el alto mínimo del contenedor al 100% del viewport */
+        }
+
+        .form-container {
+            background-color: rgba(255, 255, 255, 0.9); /* Color de fondo del formulario con transparencia */
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra del formulario */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="col-lg-6">
+            <div class="form-container">
+                <h2 class="text-center">Solicite su Turno</h2>
+                <form action="https://formsubmit.co/fer.bogado@gmail.com" method="POST">
+                    <!-- Contenido del formulario -->
+                    <div class="form-group">
+                        <label for="nombres">Nombres:</label>
+                        <input type="text" class="form-control" id="nombres" name="nombres" placeholder="Escribe tu nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="telefono">Teléfono:</label>
+                        <input type="text" class="form-control" id="telefono" name="telefono" placeholder="Dejanos tu número" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="correo">Correo Electrónico:</label>
+                        <input type="text" class="form-control" id="correo" name="correo" placeholder="Correo Electrónico" required>
+                    </div>
+                    <div class="pagina">
+                        <div class="titulo">Turno disponible</div><br>
+                        <div class="campo">
+                            <div class="label">Día de atención:</div><br>
+                            <select id="diaAtencion" name="dia de Atencion" required>
+                                <option value="Lunes">Lunes</option>
+                                <option value="Jueves">Jueves</option>
+                            </select>
+                        </div><br>
+                        <div class="campo">
+                            <div class="label">Horarios:</div><br>
+                            <select id="horario" name="horario" required>
+                                <option value="16:00">16:00</option>
+                                <option value="16:30">16:30</option>
+                                <option value="17:00">17:00</option>
+                                <option value="17:30">17:30</option>
+                                <option value="18:00">18:00</option>
+                                <option value="18:30">18:30</option>
+                                <option value="19:00">19:00</option>
+                                <option value="19:30">19:30</option>
+                            </select><br>
+                        </div><br>
+                    </div>
+                    <button type="submit" onclick="disableSelectedOption()" class="btn btn-primary btn-block">Enviar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        // Función para verificar y deshabilitar los horarios ocupados
+        function checkOccupiedTimes() {
+            var occupiedTimes = localStorage.getItem("occupiedTimes");
+            if (occupiedTimes) {
+                occupiedTimes = JSON.parse(occupiedTimes);
+                var options = document.getElementById("horario").options;
+                for (var i = 0; i < options.length; i++) {
+                    if (occupiedTimes.includes(options[i].value)) {
+                        options[i].disabled = true;
+                    }
+                }
+            }
+        }
+
+        // Función para manejar el envío del formulario
+        function handleFormSubmit(event) {
+            var selectedTime = document.getElementById("horario").value;
+            var occupiedTimes = localStorage.getItem("occupiedTimes");
+            if (!occupiedTimes) {
+                occupiedTimes = [];
+            } else {
+                occupiedTimes = JSON.parse(occupiedTimes);
+            }
+            occupiedTimes.push(selectedTime);
+            localStorage.setItem("occupiedTimes", JSON.stringify(occupiedTimes));
+            alert("Turno reservado para el día " + selectedDay + " a las " + selectedTime);
+            // Puedes enviar el formulario al servidor aquí si lo deseas
+        }
+
+        // Llamar a la función de verificación al cargar el formulario
+        window.addEventListener("load", checkOccupiedTimes);
+    </script>
+</body>
 </html>
-
-
-
