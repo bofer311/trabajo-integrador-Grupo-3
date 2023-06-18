@@ -106,24 +106,24 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <style>
         body {
-            background-image: url('img/rostro-femenino-piel.jpg'); /* Ruta de la imagen de fondo */
-            background-size: cover; /* Ajustar imagen al tamaño del contenedor */
-            background-repeat: no-repeat; /* Evitar repetición de la imagen */
-            background-position: center center; /* Centrar la imagen */
+            background-image: url('img/rostro-femenino-piel.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
         }
 
         .container {
             display: flex;
             justify-content: center;
             align-items: center;
-            min-height: 100vh; /* Ajustar el alto mínimo del contenedor al 100% del viewport */
+            min-height: 100vh;
         }
 
         .form-container {
-            background-color: rgba(255, 255, 255, 0.9); /* Color de fondo del formulario con transparencia */
+            background-color: rgba(255, 255, 255, 0.9);
             padding: 30px;
             border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra del formulario */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
     </style>
 </head>
@@ -132,8 +132,7 @@
         <div class="col-lg-6">
             <div class="form-container">
                 <h2 class="text-center">Solicite su Turno</h2>
-                <form action="https://formsubmit.co/fer.bogado@gmail.com" method="POST">
-                    <!-- Contenido del formulario -->
+                <form action="https://formsubmit.co/susanairrazabal76@gmail.com" method="POST">
                     <div class="form-group">
                         <label for="nombres">Nombres:</label>
                         <input type="text" class="form-control" id="nombres" name="nombres" placeholder="Escribe tu nombre" required>
@@ -141,10 +140,11 @@
                     <div class="form-group">
                         <label for="telefono">Teléfono:</label>
                         <input type="text" class="form-control" id="telefono" name="telefono" placeholder="Dejanos tu número" required>
+                        <small id="telefonoHelp" class="form-text text-muted">El número de teléfono debe tener el formato (11) 1234-5678.</small>
                     </div>
                     <div class="form-group">
                         <label for="correo">Correo Electrónico:</label>
-                        <input type="text" class="form-control" id="correo" name="correo" placeholder="Correo Electrónico" required>
+                        <input type="email" class="form-control" id="correo" name="correo" placeholder="Correo Electrónico" required>
                     </div>
                     <div class="pagina">
                         <div class="titulo">Turno disponible</div><br>
@@ -169,13 +169,13 @@
                             </select><br>
                         </div><br>
                     </div>
-                    <button type="submit" onclick="disableSelectedOption()" class="btn btn-primary btn-block">Enviar</button>
+                    <input type="hidden" name="_next" value="https://drairrazabal.com.ar">
+                    <button type="submit" class="btn btn-primary btn-block">Enviar</button>
                 </form>
             </div>
         </div>
     </div>
     <script>
-        // Función para verificar y deshabilitar los horarios ocupados
         function checkOccupiedTimes() {
             var occupiedTimes = localStorage.getItem("occupiedTimes");
             if (occupiedTimes) {
@@ -189,8 +189,8 @@
             }
         }
 
-        // Función para manejar el envío del formulario
         function handleFormSubmit(event) {
+            event.preventDefault();
             var selectedTime = document.getElementById("horario").value;
             var occupiedTimes = localStorage.getItem("occupiedTimes");
             if (!occupiedTimes) {
@@ -198,14 +198,26 @@
             } else {
                 occupiedTimes = JSON.parse(occupiedTimes);
             }
+            if (occupiedTimes.includes(selectedTime)) {
+                alert("El horario seleccionado ya está ocupado. Por favor, elija otro horario.");
+                return;
+            }
             occupiedTimes.push(selectedTime);
             localStorage.setItem("occupiedTimes", JSON.stringify(occupiedTimes));
             alert("Turno reservado para el día " + selectedDay + " a las " + selectedTime);
-            // Puedes enviar el formulario al servidor aquí si lo deseas
+            event.target.submit();
         }
 
-        // Llamar a la función de verificación al cargar el formulario
         window.addEventListener("load", checkOccupiedTimes);
+
+        // Validación del número de teléfono
+        var telefonoInput = document.getElementById("telefono");
+        telefonoInput.addEventListener("input", function() {
+            var telefono = telefonoInput.value;
+            telefono = telefono.replace(/\D/g, ""); // Eliminar caracteres que no sean dígitos
+            telefono = telefono.replace(/^(\d{2})(\d{4})(\d{4})$/, "($1) $2-$3"); // Formatear el número de teléfono (ejemplo: (11) 1234-5678)
+            telefonoInput.value = telefono;
+        });
     </script>
 </body>
 </html>
